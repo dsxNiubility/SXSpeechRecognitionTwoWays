@@ -9,6 +9,8 @@
 #import "ViewController.h"
 
 @interface ViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *showBufferText;
+
 
 @end
 
@@ -17,6 +19,21 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+}
+
+
+- (IBAction)restartBufferR:(id)sender {
+}
+
+- (IBAction)startBufferR:(id)sender {
+}
+- (IBAction)stopBufferR:(id)sender {
+}
+
+
+- (IBAction)startURLR:(id)sender {
+}
+- (IBAction)stopURLR:(id)sender {
 }
 
 

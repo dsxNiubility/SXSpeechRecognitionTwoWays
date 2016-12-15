@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -19,23 +18,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="klc-Zl-Hag">
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="全局指令显示在此全局指令显示在此全局指令显示在此" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eV4-6k-zUf">
-                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" red="1" green="0.95680309350000003" blue="0.86044519448095247" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="eV4-6k-zUf" secondAttribute="bottom" constant="10" id="6ae-QB-pzY"/>
-                                    <constraint firstItem="eV4-6k-zUf" firstAttribute="leading" secondItem="klc-Zl-Hag" secondAttribute="leading" constant="15" id="KUv-tT-aAT"/>
-                                    <constraint firstAttribute="height" constant="100" id="ROm-JY-6e7"/>
-                                    <constraint firstItem="eV4-6k-zUf" firstAttribute="top" secondItem="klc-Zl-Hag" secondAttribute="top" constant="10" id="h6G-o7-fpf"/>
-                                    <constraint firstAttribute="trailing" secondItem="eV4-6k-zUf" secondAttribute="trailing" constant="10" id="lpa-dm-TnV"/>
-                                </constraints>
-                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VQ5-EI-3Z4">
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SFSpeechAudioBufferRecognitionRequest方式识别" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zD1-ao-f7q">
@@ -51,6 +33,9 @@
                                         <state key="normal" title="开始">
                                             <color key="titleColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="startBufferR:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mmd-Bt-m6v"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TCb-1p-Qkf">
                                         <constraints>
@@ -60,6 +45,9 @@
                                         <state key="normal" title="重启">
                                             <color key="titleColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="restartBufferR:" destination="BYZ-38-t0r" eventType="touchUpInside" id="j5H-A9-XEn"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h3L-SU-pxp">
                                         <constraints>
@@ -69,6 +57,9 @@
                                         <state key="normal" title="结束">
                                             <color key="titleColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="stopBufferR:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6Or-yO-N4O"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我操了，蒜蓉粉丝娃娃菜，干干干你妹啊" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dCO-XW-KYH">
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -93,14 +84,16 @@
                                     <constraint firstItem="dCO-XW-KYH" firstAttribute="leading" secondItem="VQ5-EI-3Z4" secondAttribute="leading" constant="10" id="zqV-d3-gaN"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0SX-BF-qRY">
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0SX-BF-qRY">
+                                <frame key="frameInset" minX="10" minY="334" width="355" height="148"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SFSpeechURLRecognitionRequest方式识别" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dmr-3W-m4B">
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
                                         <color key="highlightedColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fbk-Jt-AuD">
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fbk-Jt-AuD">
+                                        <frame key="frameInset" minX="80" minY="98" width="80" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="80" id="gCq-4V-0Jk"/>
                                             <constraint firstAttribute="height" constant="50" id="v2X-je-Ejm"/>
@@ -108,8 +101,12 @@
                                         <state key="normal" title="全局开始">
                                             <color key="titleColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="startURLR:" destination="BYZ-38-t0r" eventType="touchUpInside" id="i1P-Mb-wLt"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YVq-lS-UgN">
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YVq-lS-UgN">
+                                        <frame key="frameInset" minX="195" minY="98" width="80" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="F0c-Wl-dDx"/>
                                             <constraint firstAttribute="width" constant="80" id="V12-Yf-aMU"/>
@@ -117,6 +114,9 @@
                                         <state key="normal" title="全局停止">
                                             <color key="titleColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="stopURLR:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3ES-YG-PJ9"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -133,23 +133,22 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="klc-Zl-Hag" secondAttribute="bottom" constant="25" id="0Qf-p2-Efl"/>
                             <constraint firstItem="VQ5-EI-3Z4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="4ij-z6-ItS"/>
                             <constraint firstItem="0SX-BF-qRY" firstAttribute="top" secondItem="VQ5-EI-3Z4" secondAttribute="bottom" constant="10" id="Cuy-UL-mrZ"/>
                             <constraint firstAttribute="trailing" secondItem="0SX-BF-qRY" secondAttribute="trailing" constant="10" id="L0U-SC-Iy4"/>
                             <constraint firstItem="VQ5-EI-3Z4" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="PNm-Tj-h8R"/>
-                            <constraint firstAttribute="trailing" secondItem="klc-Zl-Hag" secondAttribute="trailing" id="ZQL-1R-TqI"/>
                             <constraint firstItem="0SX-BF-qRY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="awV-ZI-Opk"/>
                             <constraint firstAttribute="trailing" secondItem="VQ5-EI-3Z4" secondAttribute="trailing" constant="10" id="jSC-GM-EaZ"/>
-                            <constraint firstItem="klc-Zl-Hag" firstAttribute="top" secondItem="0SX-BF-qRY" secondAttribute="bottom" constant="60" id="kuO-um-Uhb"/>
-                            <constraint firstItem="klc-Zl-Hag" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="zoG-Br-wAn"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="首页" id="LfT-d9-hHn"/>
+                    <connections>
+                        <outlet property="showBufferText" destination="dCO-XW-KYH" id="aoZ-CO-lvx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="844" y="110.19490254872565"/>
+            <point key="canvasLocation" x="1030" y="123"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="KBV-VU-YaW">
