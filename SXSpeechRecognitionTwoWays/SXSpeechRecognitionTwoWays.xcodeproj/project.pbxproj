@@ -13,6 +13,8 @@
 		1D69599E1E024AEF00EE72E7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D69599C1E024AEF00EE72E7 /* Main.storyboard */; };
 		1D6959A01E024AEF00EE72E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D69599F1E024AEF00EE72E7 /* Assets.xcassets */; };
 		1D6959A31E024AEF00EE72E7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D6959A11E024AEF00EE72E7 /* LaunchScreen.storyboard */; };
+		1D6959AC1E02753200EE72E7 /* NavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D6959AB1E02753200EE72E7 /* NavViewController.m */; };
+		1D6959AF1E02756300EE72E7 /* AVAudioManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D6959AE1E02756300EE72E7 /* AVAudioManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,10 @@
 		1D69599F1E024AEF00EE72E7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1D6959A21E024AEF00EE72E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1D6959A41E024AEF00EE72E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1D6959AA1E02753200EE72E7 /* NavViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavViewController.h; sourceTree = "<group>"; };
+		1D6959AB1E02753200EE72E7 /* NavViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavViewController.m; sourceTree = "<group>"; };
+		1D6959AD1E02756300EE72E7 /* AVAudioManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVAudioManager.h; sourceTree = "<group>"; };
+		1D6959AE1E02756300EE72E7 /* AVAudioManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVAudioManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +68,10 @@
 				1D6959971E024AEF00EE72E7 /* AppDelegate.m */,
 				1D6959991E024AEF00EE72E7 /* ViewController.h */,
 				1D69599A1E024AEF00EE72E7 /* ViewController.m */,
+				1D6959AA1E02753200EE72E7 /* NavViewController.h */,
+				1D6959AB1E02753200EE72E7 /* NavViewController.m */,
+				1D6959AD1E02756300EE72E7 /* AVAudioManager.h */,
+				1D6959AE1E02756300EE72E7 /* AVAudioManager.m */,
 				1D69599C1E024AEF00EE72E7 /* Main.storyboard */,
 				1D69599F1E024AEF00EE72E7 /* Assets.xcassets */,
 				1D6959A11E024AEF00EE72E7 /* LaunchScreen.storyboard */,
@@ -152,7 +162,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D69599B1E024AEF00EE72E7 /* ViewController.m in Sources */,
+				1D6959AF1E02756300EE72E7 /* AVAudioManager.m in Sources */,
 				1D6959981E024AEF00EE72E7 /* AppDelegate.m in Sources */,
+				1D6959AC1E02753200EE72E7 /* NavViewController.m in Sources */,
 				1D6959951E024AEF00EE72E7 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -312,6 +324,7 @@
 				1D6959A91E024AEF00EE72E7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

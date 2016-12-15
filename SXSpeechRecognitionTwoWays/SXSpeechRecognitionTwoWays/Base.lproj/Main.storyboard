@@ -84,19 +84,17 @@
                                     <constraint firstItem="dCO-XW-KYH" firstAttribute="leading" secondItem="VQ5-EI-3Z4" secondAttribute="leading" constant="10" id="zqV-d3-gaN"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0SX-BF-qRY">
-                                <frame key="frameInset" minX="10" minY="334" width="355" height="148"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0SX-BF-qRY">
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SFSpeechURLRecognitionRequest方式识别" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dmr-3W-m4B">
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
                                         <color key="highlightedColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fbk-Jt-AuD">
-                                        <frame key="frameInset" minX="80" minY="98" width="80" height="50"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fbk-Jt-AuD">
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="80" id="gCq-4V-0Jk"/>
-                                            <constraint firstAttribute="height" constant="50" id="v2X-je-Ejm"/>
+                                            <constraint firstAttribute="width" constant="80" id="LJv-dy-dRz"/>
+                                            <constraint firstAttribute="height" constant="50" id="daa-rO-n6W"/>
                                         </constraints>
                                         <state key="normal" title="全局开始">
                                             <color key="titleColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
@@ -105,11 +103,10 @@
                                             <action selector="startURLR:" destination="BYZ-38-t0r" eventType="touchUpInside" id="i1P-Mb-wLt"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YVq-lS-UgN">
-                                        <frame key="frameInset" minX="195" minY="98" width="80" height="50"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YVq-lS-UgN">
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="F0c-Wl-dDx"/>
-                                            <constraint firstAttribute="width" constant="80" id="V12-Yf-aMU"/>
+                                            <constraint firstAttribute="height" constant="50" id="Pq7-CK-9WS"/>
+                                            <constraint firstAttribute="width" constant="80" id="TfO-8R-rKY"/>
                                         </constraints>
                                         <state key="normal" title="全局停止">
                                             <color key="titleColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
@@ -121,23 +118,24 @@
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="YVq-lS-UgN" secondAttribute="bottom" id="566-zN-B6Z"/>
-                                    <constraint firstItem="dmr-3W-m4B" firstAttribute="leading" secondItem="0SX-BF-qRY" secondAttribute="leading" constant="10" id="6qI-8Q-mYT"/>
-                                    <constraint firstItem="Fbk-Jt-AuD" firstAttribute="leading" secondItem="0SX-BF-qRY" secondAttribute="leading" constant="80" id="Hdd-py-AoH"/>
-                                    <constraint firstItem="dmr-3W-m4B" firstAttribute="top" secondItem="0SX-BF-qRY" secondAttribute="top" constant="10" id="Jxz-8F-dlM"/>
-                                    <constraint firstAttribute="trailing" secondItem="dmr-3W-m4B" secondAttribute="trailing" constant="10" id="OA5-zM-QhQ"/>
-                                    <constraint firstAttribute="bottom" secondItem="Fbk-Jt-AuD" secondAttribute="bottom" id="sPR-qZ-ehI"/>
-                                    <constraint firstAttribute="trailing" secondItem="YVq-lS-UgN" secondAttribute="trailing" constant="80" id="xsI-oy-AeO"/>
+                                    <constraint firstItem="Fbk-Jt-AuD" firstAttribute="leading" secondItem="0SX-BF-qRY" secondAttribute="leading" constant="80" id="3ZW-Qo-ku4"/>
+                                    <constraint firstItem="dmr-3W-m4B" firstAttribute="top" secondItem="0SX-BF-qRY" secondAttribute="top" constant="10" id="9DZ-gA-rrt"/>
+                                    <constraint firstAttribute="bottom" secondItem="Fbk-Jt-AuD" secondAttribute="bottom" id="QHD-cZ-jZP"/>
+                                    <constraint firstAttribute="trailing" secondItem="dmr-3W-m4B" secondAttribute="trailing" constant="10" id="Sty-r2-Pxl"/>
+                                    <constraint firstItem="dmr-3W-m4B" firstAttribute="leading" secondItem="0SX-BF-qRY" secondAttribute="leading" constant="10" id="ggV-Ej-8yy"/>
+                                    <constraint firstAttribute="height" constant="148" id="hDN-BR-cHx"/>
+                                    <constraint firstAttribute="trailing" secondItem="YVq-lS-UgN" secondAttribute="trailing" constant="80" id="w7B-dB-kOu"/>
+                                    <constraint firstAttribute="bottom" secondItem="YVq-lS-UgN" secondAttribute="bottom" id="zvp-Tb-tX3"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="VQ5-EI-3Z4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="4ij-z6-ItS"/>
-                            <constraint firstItem="0SX-BF-qRY" firstAttribute="top" secondItem="VQ5-EI-3Z4" secondAttribute="bottom" constant="10" id="Cuy-UL-mrZ"/>
-                            <constraint firstAttribute="trailing" secondItem="0SX-BF-qRY" secondAttribute="trailing" constant="10" id="L0U-SC-Iy4"/>
+                            <constraint firstItem="0SX-BF-qRY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="HGm-yc-w9T"/>
+                            <constraint firstItem="0SX-BF-qRY" firstAttribute="top" secondItem="VQ5-EI-3Z4" secondAttribute="bottom" constant="10" id="LNz-V5-PL6"/>
                             <constraint firstItem="VQ5-EI-3Z4" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="PNm-Tj-h8R"/>
-                            <constraint firstItem="0SX-BF-qRY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="awV-ZI-Opk"/>
+                            <constraint firstAttribute="trailing" secondItem="0SX-BF-qRY" secondAttribute="trailing" constant="10" id="ZN5-Ta-ufN"/>
                             <constraint firstAttribute="trailing" secondItem="VQ5-EI-3Z4" secondAttribute="trailing" constant="10" id="jSC-GM-EaZ"/>
                         </constraints>
                     </view>

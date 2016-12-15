@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "AVAudioManager.h"
 #import <Speech/Speech.h>
 
 @interface ViewController ()
@@ -84,12 +85,19 @@
 }
 
 - (IBAction)stopBufferR:(id)sender {
+    [self.bufferEngine stop];
+    [self.buffeInputNode removeTapOnBus:0];
+    self.showBufferText.text = @"";
+    self.bufferRequest = nil;
+    self.bufferTask = nil;
 }
 
 
 - (IBAction)startURLR:(id)sender {
+    [[AVAudioManager shareManager] start];
 }
 - (IBAction)stopURLR:(id)sender {
+    [[AVAudioManager shareManager] stop];
 }
 
 
