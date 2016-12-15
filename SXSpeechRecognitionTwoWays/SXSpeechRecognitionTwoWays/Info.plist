@@ -41,5 +41,9 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSSpeechRecognitionUsageDescription</key>
+	<string>不给权限还Demo个蛋啊</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>不给权限还Demo个蛋蛋啊</string>
 </dict>
 </plist>
