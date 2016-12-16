@@ -12,6 +12,7 @@
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *showBufferText;
+@property (weak, nonatomic) IBOutlet UIButton *restartBtn;
 
 
 
@@ -33,10 +34,12 @@
     [SFSpeechRecognizer requestAuthorization:^(SFSpeechRecognizerAuthorizationStatus status) {
 
     }];
+    
 }
 
 
 - (IBAction)restartBufferR:(id)sender {
+    
 }
 
 - (IBAction)startBufferR:(id)sender {

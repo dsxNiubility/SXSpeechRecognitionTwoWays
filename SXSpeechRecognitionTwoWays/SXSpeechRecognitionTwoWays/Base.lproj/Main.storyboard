@@ -61,7 +61,7 @@
                                             <action selector="stopBufferR:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6Or-yO-N4O"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我操了，蒜蓉粉丝娃娃菜，干干干你妹啊" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dCO-XW-KYH">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我操了，蒜蓉粉丝娃娃菜，惹人人人人人人人我操了，蒜蓉粉丝娃娃菜，惹人人人人人人人" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dCO-XW-KYH">
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -141,17 +141,18 @@
                     </view>
                     <navigationItem key="navigationItem" title="首页" id="LfT-d9-hHn"/>
                     <connections>
+                        <outlet property="restartBtn" destination="TCb-1p-Qkf" id="qih-Jg-2rl"/>
                         <outlet property="showBufferText" destination="dCO-XW-KYH" id="aoZ-CO-lvx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1030" y="123"/>
+            <point key="canvasLocation" x="1029.5999999999999" y="122.78860569715144"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Nav View Controller-->
         <scene sceneID="KBV-VU-YaW">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="m4m-7H-l6z" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="m4m-7H-l6z" customClass="NavViewController" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="hB4-7I-yLe">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -164,7 +165,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r9W-uH-Za9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-95.200000000000003" y="133.5832083958021"/>
+            <point key="canvasLocation" x="-73" y="128"/>
         </scene>
     </scenes>
 </document>

@@ -32,6 +32,7 @@
 		1D6959AB1E02753200EE72E7 /* NavViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavViewController.m; sourceTree = "<group>"; };
 		1D6959AD1E02756300EE72E7 /* AVAudioManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVAudioManager.h; sourceTree = "<group>"; };
 		1D6959AE1E02756300EE72E7 /* AVAudioManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVAudioManager.m; sourceTree = "<group>"; };
+		1D6959B01E03E28800EE72E7 /* SpeechRecognition.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpeechRecognition.pch; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +71,7 @@
 				1D69599A1E024AEF00EE72E7 /* ViewController.m */,
 				1D6959AA1E02753200EE72E7 /* NavViewController.h */,
 				1D6959AB1E02753200EE72E7 /* NavViewController.m */,
+				1D6959B01E03E28800EE72E7 /* SpeechRecognition.pch */,
 				1D6959AD1E02756300EE72E7 /* AVAudioManager.h */,
 				1D6959AE1E02756300EE72E7 /* AVAudioManager.m */,
 				1D69599C1E024AEF00EE72E7 /* Main.storyboard */,
@@ -286,6 +288,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = KLD54SC2VP;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = SXSpeechRecognitionTwoWays/SpeechRecognition.pch;
 				INFOPLIST_FILE = SXSpeechRecognitionTwoWays/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Sankuai.SXSpeechRecognitionTwoWays;
@@ -298,6 +302,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = KLD54SC2VP;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = SXSpeechRecognitionTwoWays/SpeechRecognition.pch;
 				INFOPLIST_FILE = SXSpeechRecognitionTwoWays/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Sankuai.SXSpeechRecognitionTwoWays;

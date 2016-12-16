@@ -133,6 +133,7 @@
     NSLog(@"%@",recognitionResult.bestTranscription.formattedString);
 //    self.showLabel.text = recognitionResult.bestTranscription.formattedString;
 //    NSTimeInterval cao = [[NSDate date]timeIntervalSince1970] - self.delay;
+    [[NSNotificationCenter defaultCenter]postNotificationName:SPEECH_RECOGNITION_MSG object:nil userInfo:@{@"msg":recognitionResult.bestTranscription.formattedString}];
     [self setupTimer];
 }
 
