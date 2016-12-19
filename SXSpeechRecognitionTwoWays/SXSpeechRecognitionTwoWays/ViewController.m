@@ -32,9 +32,12 @@
     
     
     [SFSpeechRecognizer requestAuthorization:^(SFSpeechRecognizerAuthorizationStatus status) {
-
+        // 对结果枚举的判断
+        if(status != SFSpeechRecognizerAuthorizationStatusAuthorized){
+            NSLog(@"不给权限直接强退");
+            [@[] objectAtIndex:1];
+        }
     }];
-    
 }
 
 
@@ -46,6 +49,7 @@
     
     self.bufferRec = [[SFSpeechRecognizer alloc]initWithLocale:[NSLocale localeWithLocaleIdentifier:@"zh_CN"]];
     self.bufferEngine = [[AVAudioEngine alloc]init];
+    self.buffeInputNode = [self.bufferEngine inputNode];
     
     if (_bufferTask != nil) {
         [_bufferTask cancel];
@@ -57,33 +61,32 @@
     [audioSession setMode:AVAudioSessionModeMeasurement error:nil];
     [audioSession setActive:true error:nil];
     
+    // block外的代码也都是准备工作，参数初始设置等
     self.bufferRequest = [[SFSpeechAudioBufferRecognitionRequest alloc]init];
-    AVAudioInputNode *inputNode = [self.bufferEngine inputNode];
-    self.buffeInputNode = inputNode;
-    SFSpeechAudioBufferRecognitionRequest *tempRecognitionRequest = self.bufferRequest;
-    
-    tempRecognitionRequest.shouldReportPartialResults = true;
-    
-    self.bufferTask = [self.bufferRec recognitionTaskWithRequest:tempRecognitionRequest resultHandler:^(SFSpeechRecognitionResult * _Nullable result, NSError * _Nullable error) {
+    self.bufferRequest.shouldReportPartialResults = true;
+    __weak ViewController *weakSelf = self;
+    self.bufferTask = [self.bufferRec recognitionTaskWithRequest:self.bufferRequest resultHandler:^(SFSpeechRecognitionResult * _Nullable result, NSError * _Nullable error) {
         
         if (result != nil) {
-            self.showBufferText.text = result.bestTranscription.formattedString;
+            weakSelf.showBufferText.text = result.bestTranscription.formattedString;
         }
-        
         if (error != nil) {
             NSLog(@"%@",error.userInfo);
         }
     }];
     
-    AVAudioFormat *format =[inputNode outputFormatForBus:0];
-    [inputNode installTapOnBus:0 bufferSize:1024 format:format block:^(AVAudioPCMBuffer * _Nonnull buffer, AVAudioTime * _Nonnull when) {
-        [self.bufferRequest appendAudioPCMBuffer:buffer];
+    // 监听一个标识位并拼接流文件
+    AVAudioFormat *format =[self.buffeInputNode outputFormatForBus:0];
+    [self.buffeInputNode installTapOnBus:0 bufferSize:1024 format:format block:^(AVAudioPCMBuffer * _Nonnull buffer, AVAudioTime * _Nonnull when) {
+        [weakSelf.bufferRequest appendAudioPCMBuffer:buffer];
     }];
     
+    // 准备并启动引擎
     [self.bufferEngine prepare];
-    
-    [self.bufferEngine startAndReturnError:nil];
-    
+    NSError *error = nil;
+    if (![self.bufferEngine startAndReturnError:&error]) {
+        NSLog(@"%@",error.userInfo);
+    };
     self.showBufferText.text = @"等待命令中.....";
 }
 
