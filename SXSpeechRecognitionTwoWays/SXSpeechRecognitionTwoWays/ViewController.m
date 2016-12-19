@@ -38,6 +38,7 @@
             [@[] objectAtIndex:1];
         }
     }];
+    [[AVAudioManager shareManager] start];
 }
 
 

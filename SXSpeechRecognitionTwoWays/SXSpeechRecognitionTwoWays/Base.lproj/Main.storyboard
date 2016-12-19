@@ -61,7 +61,7 @@
                                             <action selector="stopBufferR:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6Or-yO-N4O"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我操了，蒜蓉粉丝娃娃菜，惹人人人人人人人我操了，蒜蓉粉丝娃娃菜，惹人人人人人人人" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dCO-XW-KYH">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="占位文字，蒜蓉粉丝娃娃菜" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dCO-XW-KYH">
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -128,6 +128,11 @@
                                     <constraint firstAttribute="bottom" secondItem="YVq-lS-UgN" secondAttribute="bottom" id="zvp-Tb-tX3"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="董铂然博客园" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Zs-NU-Bx9">
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -136,6 +141,8 @@
                             <constraint firstItem="0SX-BF-qRY" firstAttribute="top" secondItem="VQ5-EI-3Z4" secondAttribute="bottom" constant="10" id="LNz-V5-PL6"/>
                             <constraint firstItem="VQ5-EI-3Z4" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="PNm-Tj-h8R"/>
                             <constraint firstAttribute="trailing" secondItem="0SX-BF-qRY" secondAttribute="trailing" constant="10" id="ZN5-Ta-ufN"/>
+                            <constraint firstItem="3Zs-NU-Bx9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="15" id="eKi-fr-DAC"/>
+                            <constraint firstItem="3Zs-NU-Bx9" firstAttribute="top" secondItem="0SX-BF-qRY" secondAttribute="bottom" constant="15" id="jJM-02-696"/>
                             <constraint firstAttribute="trailing" secondItem="VQ5-EI-3Z4" secondAttribute="trailing" constant="10" id="jSC-GM-EaZ"/>
                         </constraints>
                     </view>

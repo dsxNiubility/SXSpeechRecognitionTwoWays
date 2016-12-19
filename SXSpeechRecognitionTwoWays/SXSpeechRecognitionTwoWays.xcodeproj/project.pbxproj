@@ -15,6 +15,7 @@
 		1D6959A31E024AEF00EE72E7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D6959A11E024AEF00EE72E7 /* LaunchScreen.storyboard */; };
 		1D6959AC1E02753200EE72E7 /* NavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D6959AB1E02753200EE72E7 /* NavViewController.m */; };
 		1D6959AF1E02756300EE72E7 /* AVAudioManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D6959AE1E02756300EE72E7 /* AVAudioManager.m */; };
+		1D6959B31E0806CB00EE72E7 /* ViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D6959B21E0806CB00EE72E7 /* ViewController2.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,8 @@
 		1D6959AD1E02756300EE72E7 /* AVAudioManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVAudioManager.h; sourceTree = "<group>"; };
 		1D6959AE1E02756300EE72E7 /* AVAudioManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVAudioManager.m; sourceTree = "<group>"; };
 		1D6959B01E03E28800EE72E7 /* SpeechRecognition.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpeechRecognition.pch; sourceTree = "<group>"; };
+		1D6959B11E0806CB00EE72E7 /* ViewController2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController2.h; sourceTree = "<group>"; };
+		1D6959B21E0806CB00EE72E7 /* ViewController2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController2.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +74,8 @@
 				1D69599A1E024AEF00EE72E7 /* ViewController.m */,
 				1D6959AA1E02753200EE72E7 /* NavViewController.h */,
 				1D6959AB1E02753200EE72E7 /* NavViewController.m */,
+				1D6959B11E0806CB00EE72E7 /* ViewController2.h */,
+				1D6959B21E0806CB00EE72E7 /* ViewController2.m */,
 				1D6959B01E03E28800EE72E7 /* SpeechRecognition.pch */,
 				1D6959AD1E02756300EE72E7 /* AVAudioManager.h */,
 				1D6959AE1E02756300EE72E7 /* AVAudioManager.m */,
@@ -168,6 +173,7 @@
 				1D6959981E024AEF00EE72E7 /* AppDelegate.m in Sources */,
 				1D6959AC1E02753200EE72E7 /* NavViewController.m in Sources */,
 				1D6959951E024AEF00EE72E7 /* main.m in Sources */,
+				1D6959B31E0806CB00EE72E7 /* ViewController2.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

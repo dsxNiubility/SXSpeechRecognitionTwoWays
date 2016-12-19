@@ -46,7 +46,7 @@
 /** 设置录音环境 */
 - (void)setupRecorder {
     // 1. 音频会话
-//    [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayAndRecord error:NULL];
+    [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayAndRecord error:NULL];
     
     // 参数设置
     NSDictionary *recordSettings = [[NSDictionary alloc] initWithObjectsAndKeys:
@@ -69,7 +69,6 @@
 }
 
 - (void)setupTimer {
-
     [self.monitor record];
     self.timer = [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(updateTimer) userInfo:nil repeats:YES];
 }
